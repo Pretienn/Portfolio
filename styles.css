@@ -1,0 +1,290 @@
+ @font-face {
+  font-family: 'Velvelyne';
+  src: url(typo/Velvelyne-Regular.otf);}
+
+
+ @font-face {
+  font-family: 'Avara';
+  src: url(typo/Avara-Bold.otf);}
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{
+  margin:0;
+  padding:0;
+}
+
+.lang-switch button {
+  font-family:'Avara';
+  background-image: url(images/bandeau2.gif);
+  background-position: center;
+  border: none;
+  color: black;
+}
+
+.lang-switch button:hover {
+  background: #000;
+  color: #fff;
+}
+
+p{
+  font-family: 'Avara';
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: black;
+}
+
+body{
+  justify-content:center;
+      align-items:center;
+  display: flex;
+}
+
+main{
+    width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+}
+
+
+header{
+  font-family: 'Velvelyne';
+  text-align: center;
+  height: 200px;
+  margin-bottom: 300px;
+  color: black;
+
+}
+
+header img{
+  height: 400px;
+  padding-bottom: 0px;
+}
+
+img {
+  padding-bottom: 40px;
+}
+
+.profil{
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+section{
+   color: black;
+  font-family: 'Avara';
+  text-align: left;
+  width: 1000px;
+  height: auto;
+  margin-left: 10px;
+  padding-bottom: 80px;
+}
+
+.logo{
+position: absolute; 
+ width: 120px;
+ height: 120px; 
+  cursor: pointer;
+      user-select: none;
+      pointer-events: none; 
+      transform-origin: center center;
+display: block;      
+ }
+
+
+.prompto{
+margin-top: 0px;
+padding-top: 0px;
+}
+
+.prpt{
+  float: left;
+}
+
+.prpt2{
+  margin-bottom: 240px;
+  padding-bottom: 0px;
+}
+
+.dette{
+  margin-top: 100px;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
+footer{
+  font-family: 'Avara';
+  font-size: 11px;
+  color: black;
+  border-bottom: solid black; 2px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 100px;
+
+}
+
+h1{
+   font-family: 'Velvelyne';
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+ color: black;
+ font-size: 40px;
+}
+
+ul{
+  text-align: center;
+  padding-top: 50px;
+  color: black;
+  list-style-type: none;
+}
+
+li{
+  margin-bottom: 40px;
+
+}
+
+
+a{
+  color: black;
+  font-family: 'Avara';
+  text-decoration: none;
+}
+
+
+h3{
+  font-family: 'Velvelyne';
+  margin-bottom: 40px;
+  padding-top: 40px;
+  font-size: 25px;
+  color: black;
+
+}
+
+.ticket{
+  float: left;
+}
+
+.loup{
+  width: 500px;
+  height: auto;
+}
+
+.sens{
+  padding-top: 100px;
+
+}
+
+
+/* ========================= */
+/* VERSION RESPONSIVE MOBILE */
+/* ========================= */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    display: block;
+  }
+
+  main {
+    width: 100%;
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  section {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+
+  header {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  header img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 28px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  p br{
+    display: none;
+  }
+
+  /* Supprime tous les floats */
+  .profil,
+  .ticket,
+  .prpt,
+  .prpt2 {
+    float: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+.profil{
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+}
+
+.reve{
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+  /* Images full width */
+  img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .loup {
+    width: 100%;
+  }
+
+  .lang-switch {
+    margin-top: 15px;
+  }
+
+  ul {
+    padding-top: 30px;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 60px;
+    font-size: 10px;
+  }
+}

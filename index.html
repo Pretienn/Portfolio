@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Pretienn</title>  
+  <link rel="stylesheet" href="styles.css"> 
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" href="images/logo.gif" type="image/gif">
+ <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="scrollreveal.min.js"></script>
+</head>
+<script>
+function applyLang(lang) {
+  document.querySelectorAll('[data-fr]').forEach(elem => {
+    elem.innerHTML = elem.dataset[lang];
+  });
+
+const pdfBtn = document.getElementById('pdf-btn');
+  if (pdfBtn) {
+    if (lang === 'fr') {
+      pdfBtn.href = 'doc-fr.pdf';
+    } else if (lang === 'en') {
+      pdfBtn.href = 'doc-en.pdf';
+    }
+  }
+}
+
+function setLang(lang) {
+  localStorage.setItem('lang', lang);
+  applyLang(lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem('lang') || 'fr';
+  applyLang(saved);
+});
+</script>
+<body>
+  <main>
+    <header> 
+      <img src="images/etienne.png">
+      <p>-Online portfolio-</p>
+
+      <div class="lang-switch">
+        <button onclick="setLang('fr')">FR</button>
+       <button onclick="setLang('en')">EN</button>
+    </div>
+    </header>	
+<section>
+  <h1 data-fr="Présentation" data-en="Presentation"></h1>
+  <img src="images/moi.gif" class="profil">
+   <p data-fr="<br>Mon parcours de graphiste débute en 2021. Diplômé d’un bachelier en techniques infographiques <br> à la Haute École Albert Jacquard de Namur, j’y ai suivi une formation axée sur l’illustration<br> et l’animation. J’ai ensuite choisi de me spécialiser dans les arts graphiques à l’ESA Saint-Luc Liège,<br> où j’ai obtenu en 2025 un bachelier en communication visuelle et graphique. <br>Mon approche du graphisme est pluridisciplinaire : j’y intègre autant des éléments issus de domaines artistiques et artisanaux, comme l’illustration ou la bande dessinée, que des notions de communication et de marketing développées au fil de mes études et de mes expériences." data-en="<br>My journey as a graphic designer began in 2021. After earning a bachelor’s degree in computer graphics techniques from the Haute École Albert Jacquard in Namur, I received training focused<br> on illustration and animation. I then chose to specialize in graphic arts at ESA Saint-Luc Liège,<br> where I obtained in 2025 a bachelor’s degree in visual and graphic communication.<br> My approach to graphic design is multidisciplinary: I incorporate elements from artistic and craft domains, such as illustration and comic art, alongside concepts of communication and marketing developed throughout my studies and experiences."></p> 
+
+     <h1 data-fr="Travaux" data-en="Works"></h1> 
+    <h3>Inventaire des mauvaises transactions</h3>
+    <img src="images/transaction.gif" class="ticket">
+    <p data-fr="<br>Réalisation d’un fanzine regroupant plusieurs anecdotes de vie liées à de mauvaises transactions.<br><br> Le fanzine est imprimé sur des tickets de caisse à l’aide<br> d’une imprimante thermique, renforçant<br> ainsi le thème central du projet." data-en="<br>Creation of a fanzine compiling several life anecdotes related to bad transactions. <br><br>The fanzine is printed on receipts using <br>a thermal printer, thereby reinforcing <br>the central theme of the project."></p>
+    
+    <h3>Rêve-Party</h3>
+    <p data-fr="Motion design réalisé sur After effect<br> à partir d’une illustration." data-en="Motion design created in After Effects<br> from an illustration."></p>
+    <img src="images/rave.gif" class="reve"> 
+
+<h3>La troupe de la manuf'</h3>
+     <p data-fr="Identité visuelle réalisée pour la troupe de la Manuf' consistant en une template d'affiche,<br> un logo et une illustration pour la pièce de théatre." data-en="Visual identity created for the Manuf' troupe, consisting of a poster template, a logo, and an illustration for the theater production."></p>
+    <img src="images/manuf.gif"> 
+    
+<img src="images/prpt.gif" class="prpt">
+<img src="images/prpt2.gif"class="prpt2">
+<h3>Prompto</h3 class="prompto">
+<p data-fr="Réalisation collective pour le festival<br> de graphisme TRANSAT. Prompto est une base<br> de données graphique née de la collaboration entre dix étudiants de l’ESAC Cambrai et dix étudiants de l’ESA Saint-Luc." data-en="Collective project for the TRANSAT graphic design festival. Prompto is a graphic database<br> born from the collaboration between ten students from ESAC Cambrai and ten students from ESA Saint-Luc.
+"></p>
+
+   <h3>Le surrendettement</h3 class>
+   <p data-fr="Commande d’une vidéo animée sur le surendettement, réalisée au sein de Camera-etc." data-en="Order of an animated video on over-indebtedness, produced at Camera-etc."></p>
+   <img src="images/dette.gif">
+   <img src="images/dette2.gif">
+
+<h3 data-en="Urban Sketching and other illustrated works" data-fr="Urban sketching et illustrations"></h3>
+<p data-fr="Dessins réalisés pour l’exposition Urban Sketching Arlon 2025 et commissions artistiques" data-en="Drawings created for the exhibition Urban Sketching Arlon 2025 and artistic commissions"></p>
+<img src="images/sketch.gif">
+<img src="images/expo.gif">
+
+ <h3>Maitrank 2024</h3>
+     <p data-fr="Identité visuelle réalisée pour la Fête du Maitrank d’Arlon. Les visuels ont été créés à l’aide de tampons en linogravure." data-en="Visual identity created for the Fête du Maitrank in Arlon. <br>The visuals were made using linocut stamps."></p>
+    <img src="images/maitrank1.gif"> 
+    <img src="images/maitrank2.gif">
+
+<h3>Microfilm</h3>
+<p data-fr="Séquence animée pour un Microfilm réalisée au sein<br> de Camera-etc." data-en="Animated sequence for a Microfilm produced<br> at Camera-etc."></p>  
+ <img src="images/loup.gif" class="loup">
+
+<h3 class="sens">Atlas sensible</h3>
+<p data-fr="Édition autoproduite en trois livrets, présentant<br> une observation graphique et poétique du réseau d’égouts de la ville de Liège et de ses environs." data-en="Self-published edition in three booklets, presenting<br> a graphic and poetic observation of the sewer network of the city of Liège and its surroundings.
+"></p>
+<img src="images/atlas.gif"> 
+
+
+
+
+
+      <script>
+
+        $(document).ready(function() {
+        window.sr = new ScrollReveal();
+
+        sr.reveal('p');
+        sr.reveal('img', { delay: 200 });
+        });
+
+
+      </script>
+  </section>
+  <nav>
+    <ul>
+        <li><a href="mailto:perrot.etienne27@gmail.com">Mail: perrot.etienne27@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/pretienn/">Instagram: @pretienn</a></li>
+        <li><a data-fr="Téléphone: +32 492883469" data-en="phone : +32 492883469"></a></li>
+      </ul>
+    </nav>
+    <footer>© PERROT ETIENNE - Tous droits réservés -
+    </footer>
+
+  </main> 
+</body>
+</html>
