@@ -11,18 +11,23 @@
 </head>
 <script>
 function applyLang(lang) {
+
   document.querySelectorAll('[data-fr]').forEach(elem => {
     elem.innerHTML = elem.dataset[lang];
   });
 
-const pdfBtn = document.getElementById('pdf-btn');
+  const pdfBtn = document.getElementById('pdf-btn');
+
   if (pdfBtn) {
-    if (lang === 'fr') {
-      pdfBtn.href = 'doc-fr.pdf';
-    } else if (lang === 'en') {
-      pdfBtn.href = 'doc-en.pdf';
+
+    if (lang === "en") {
+      pdfBtn.href = pdfBtn.dataset.pdfEn;
+    } else {
+      pdfBtn.href = pdfBtn.dataset.pdfFr;
     }
+
   }
+
 }
 
 function setLang(lang) {
@@ -51,6 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
   <img src="images/moi.gif" class="profil">
    <p data-fr="<br>Mon parcours de graphiste débute en 2021. Diplômé d’un bachelier en techniques infographiques <br> à la Haute École Albert Jacquard de Namur, j’y ai suivi une formation axée sur l’illustration<br> et l’animation. J’ai ensuite choisi de me spécialiser dans les arts graphiques à l’ESA Saint-Luc Liège,<br> où j’ai obtenu en 2025 un bachelier en communication visuelle et graphique. <br>Mon approche du graphisme est pluridisciplinaire : j’y intègre autant des éléments issus de domaines artistiques et artisanaux, comme l’illustration ou la bande dessinée, que des notions de communication et de marketing développées au fil de mes études et de mes expériences." data-en="<br>My journey as a graphic designer began in 2021. After earning a bachelor’s degree in computer graphics techniques from the Haute École Albert Jacquard in Namur, I received training focused<br> on illustration and animation. I then chose to specialize in graphic arts at ESA Saint-Luc Liège,<br> where I obtained in 2025 a bachelor’s degree in visual and graphic communication.<br> My approach to graphic design is multidisciplinary: I incorporate elements from artistic and craft domains, such as illustration and comic art, alongside concepts of communication and marketing developed throughout my studies and experiences."></p> 
 
+<a 
+id="pdf-btn"
+href="images/cv2026-fr.pdf"
+download
+class="btn-download"
+data-fr="Télécharger mon CV"
+data-en="Download my CV"
+data-pdf-fr="images/cv2026-fr.pdf"
+data-pdf-en="images/cv2026-en.pdf">
+</a>
+  
      <h1 data-fr="Travaux" data-en="Works"></h1> 
     <h3>Inventaire des mauvaises transactions</h3>
     <img src="images/transaction.gif" class="ticket">
@@ -132,4 +148,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
+
 
