@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Pretienn</title>
+  <link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="images/logo.gif" type="image/gif">
+<script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="jquery.innerfade.js"></script>
+  <script type="text/javascript" src="scrollreveal.min.js"></script>
+  <script type="text/javascript" src="scrolltop.js"></script>
+</head>
+<script>
+function applyLang(lang) {
+
+  document.querySelectorAll('[data-en]').forEach(elem => {
+
+    if (elem.dataset.fr === undefined) {
+      elem.dataset.fr = elem.innerHTML;
+    }
+    elem.innerHTML = elem.dataset[lang];
+  });
+
+  document.documentElement.lang = lang;
+
+  const pdfBtn = document.getElementById('pdf-btn');
+
+  if (pdfBtn) {
+
+    if (lang === "en") {
+      pdfBtn.href = pdfBtn.dataset.pdfEn;
+    } else {
+      pdfBtn.href = pdfBtn.dataset.pdfFr;
+    }
+
+  }
+
+}
+function setLang(lang) {
+  localStorage.setItem('lang', lang);
+  applyLang(lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem('lang') || 'fr';
+  applyLang(saved);
+});
+</script>
+<body>
+  <header id="top">
+   <div class="lang-switch">
+        <button onclick="setLang('fr')">FR</button>
+       <button onclick="setLang('en')">EN</button>
+    </div>
+  <div class="titre">
+    <img class="profil" src="images/moi.png">
+    <div class="info">
+     <h1 class="nom">Etienne Perrot</h1>
+     <h2 class="nom" data-en="Graphic designer - online portfolio">Graphiste multimédia - portfolio</h2>
+    <nav>
+    <ul>
+      <li><a class="cv" href="#" data-en="education">formation</a></li>
+      <li><a class="contact" href="#" data-en="contact">contact</a></li>
+    </ul>
+  </nav>
+
+   <div class="CV">
+    <h2 class="nom" data-en="education">formation</h2>
+     <ul>
+        <li><a href="#" data-en="<strong>2022-2025</strong> - Bachelor's degree in Fine, Visual and Spatial Arts:<br> Visual and Graphic Communication - École supérieure des Arts Saint-Luc Liège"><strong>2022-2025</strong> - Bachelier en arts plastiques, visuels et de l’espace :<br> Communication visuelle et graphique - École supérieure des Arts Saint-Luc Liège</a></li>
+        <li><a href="#" data-en="<strong>2017-2021</strong> - Bachelor's degree in Graphic Techniques, Computer Graphics specialization<br> - Haute École Albert Jacquard"><strong>2017-2021</strong> - Bachelier en techniques graphiques, orientation techniques infographiques<br> - Haute École Albert Jacquard</a></li>
+     </ul>
+  </div>
+
+   <div class="Contact">
+     <h2 class="nom" data-en="contact">contact</h2>
+      <ul>
+        <li><a href="#">+32 492 88 34 69</a></li>
+        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=perrot.etienne27@gmail.com&su=Prise%20de%20contact" target="_blank" rel="noopener">perrot.etienne27@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/pretienn/">@pretienn</a></li>
+      </ul>
+   </div>
+   </div>
+ </div>
+   <script>
+    $(".cv").on("click", function(){
+    $(".CV").slideToggle("slow");
+    });
+
+    $(".contact").on("click", function(){
+    $(".Contact").slideToggle("slow");
+    });
+
+</script>
+  </header>
+  <main>
+    <div>
+      <h1 data-en="Works">Travaux</h1>
+
+      <h2>Pea Studio</h2>
+      <p data-en="<br>Pea Studio is an independent video game studio co-founded by Alexandre Perrot and myself.<br> In September 2026, Pea Studio released its first production on Steam: “Chlorine Scales”.<br> A point-and-click game with a carefully crafted aesthetic. I was in charge of the game design, art direction,<br> illustrations, animations and sound design; Alexandre programmed the game in Unity.<br> <br> To support the launch campaign, a printed edition expanding the game's universe<br> as a “choose your own adventure” book was produced. A few weeks after its release,<br> the game is available on Steam with generally positive reviews<br> praising the art direction and the replayability of the experience."><br>Pea Studio est un studio indépendant de jeux vidéo cofondé par Alexandre Perrot et moi-même.<br> En septembre 2026, Pea Studio sort sa première production sur Steam : « Écailles de chlore ».<br> Un point-and-click à l'esthétique travaillée. J'ai assuré le game design, la direction artistique,<br> les illustrations, les animations et le sound design ; Alexandre a programmé le jeu sur Unity.<br> <br> Pour accompagner la campagne de lancement, une édition papier déclinant l'univers du jeu<br> dans un « livre dont vous êtes le héros » a été réalisée. Quelques semaines après sa sortie,<br> le jeu est disponible sur Steam avec des évaluations globalement positives<br> saluant la direction artistique et la rejouabilité de l'expérience.</p>
+
+      <p class="edc_titre"><strong>Point and click</strong></p>
+
+      <img class="edc1" src="images/edc_bar.gif">
+      <img class="edc2" src="images/edc_proprio.gif">
+      <img class="edc3" src="images/edc_combat2.gif">
+      <img class="edc2" src="images/edc_echange.gif">
+
+      <a class="bouton" href="https://store.steampowered.com/app/4968400/Chlorine_Scales/" data-en="View the Steam page for Chlorine Scales">Voir la page steam d'Écailles de chlore</a>
+
+      <p class="edc_titre2" data-en="<strong>Book format</strong>"><strong>Edition imprimée</strong></p>
+
+      <img class="edc4" src="images/edc_livre.gif">
+
+      <h2>Camera-etc</h2>
+      <p data-en="<br>As part of my end-of-studies internship, I worked as a graphic designer, video editor and 2D animator for Camera-etc,<br> an auteur film production workshop. Working with the teams as an assistant 2D animator<br> and video editor, I took part in the project “Comment une facture devient une grosse dette” (How a bill becomes a huge debt), a video capsule explaining<br> the timeline of over-indebtedness, from a simple bill to the build-up of debts, as well as the support services<br> available to deal with it, commissioned by the Debt Mediation Service of the CPAS of Molenbeek-Saint-Jean – TRAPES. <br><br>I also worked as a video editor and 2D animator on other capsules, including a music video<br> for Camera-etc's Microfilms project.<br><br>">
+        <br>Dans le cadre de mon stage de fin d'études, j'ai été graphiste, monteur vidéo et animateur 2D pour Camera-etc,<br> un atelier de production de films d'auteur. En collaborant avec les équipes en tant qu'assistant animateur 2D<br> et monteur vidéo, j'ai participé au projet « Comment une facture devient une grosse dette », une capsule vidéo expliquant<br> la ligne du temps du surendettement, de la simple facture à l'accumulation de dettes, ainsi que les services d'aide<br> pour y remédier, commandée par le Service Médiation de Dettes du CPAS de Molenbeek-Saint-Jean – TRAPES. <br><br>J'ai également travaillé comme monteur vidéo et animateur 2D sur d'autres capsules, dont un clip vidéo<br> dans le cadre du projet Microfilms de Camera-etc.<br><br></p>
+
+        <p><strong>Comment une facture devient une grosse dette</strong></p>
+
+        <img class="dette1" src="images/dette.gif">
+        <img class="dette2" src="images/dette2.gif">
+
+        <p><strong>Microfilm Anaïse</strong></p>
+
+
+        <img class="loup2" src="images/loup2.gif">
+        <img class="loup1" src="images/loup.gif">
+
+      <h2>Festival Transat Graphique</h2>
+      <p data-en="<br>A Franco-Belgian graphic design festival, in collaboration with ESAC Cambrai and Saint-Luc Liège,<br> held in Cambrai from 26 April to 16 May 2025. The event showcases designers, artists,<br> established or emerging studios, students and recent graduates. The festival builds new networks,<br> as well as cross-border and intergenerational collaborations.<br><br> In collaboration with ESAC, I took part in the scenography of part of the exhibition: poster hanging and signage.<br><br> I also took part in the PROMPTO! project: a bank of graphic resources created by and for graphic designers.<br><br>"><br>Festival franco-belge de design graphique, en collaboration avec l’ESAC Cambrai et Saint-Luc Liège,<br> ayant eu lieu à Cambrai du 26 avril au 16 mai 2025. Cet événement met en valeur des designers, des artistes,<br> des studios existants ou en devenir, des étudiant·es et de jeunes diplômé·es. Le festival bâtit de nouveaux réseaux,<br> des coopérations transfrontalières et intergénérationnelles.<br><br> En collaboration avec l’ESAC, j’ai participé à la scénographie d’une partie de l’exposition : pose d’affiches et signalétique.<br><br> J’ai également participé au projet PROMPTO! : une banque de ressources graphiques mise en place par et pour des graphistes.<br><br></p>
+
+      <p class="transat_titre" data-en="<strong>Transat scenography</strong>"> <strong>Transat scénographie</strong></p>
+
+      <img class="sceno" src="images/sceno.gif">
+
+      <p class="transat_titre"><strong>PROMPTO!</strong></p>
+
+      <img class="prompto" src="images/prompto.gif">
+
+     <a class="bouton" href="https://www.esac-cambrai.net/wordpress/transat-graphique-cambrai-2025/" data-en="Transat, event page">Voir la page du festival</a> 
+
+
+      <h2>Freelance</h2>
+      <p data-en="During my freelance career, I have worked on several contracts.<br><br>">Durant mon parcours de freelance, j'ai été amené à travailler sur plusieurs contrats.<br><br></p>
+<p data-en="<strong>Journal du dernier loup</strong>, in collaboration with an illustrator: layout, typography management,<br> image retouching and creation of the mock-up of a children's book. Project followed through to printing."><strong>Journal du dernier loup</strong>, en collaboration avec une illustratrice : mise en page, gestion typographique,<br> retouche d'images et réalisation de la maquette d'un livre de littérature jeunesse. Suivi du projet jusqu'à l'impression.</p>
+
+<img class="lpf" src="images/illu.gif">
+
+<p data-en="<strong>La troupe de la Manuf'</strong>: as part of a visual identity renewal, the troupe de la Manuf' commissioned<br> a reusable poster template and a new logo."><strong>La troupe de la Manuf'</strong> : dans le cadre d'un renouvellement d'identité visuelle, la troupe de la Manuf' m'a commandé<br> un template d'affiche réutilisable ainsi qu'un nouveau logo.</p>
+
+<img class="manuf" src="images/manuf.gif">
+
+<h2 data-en="Personal and non-profit work">Travaux personnels et non lucratifs</h2>
+<p data-en="<br><strong>Les poissons flingueurs</strong>: a self-published fanzine containing a comic strip made as an exquisite corpse,<br> illustrated by Alexandre Perrot and myself, printed and bound by hand."><br><strong>Les poissons flingueurs</strong> : fanzine autoproduit contenant une bande dessinée réalisée en cadavre exquis,<br> illustré par Alexandre Perrot et moi-même, imprimé et relié par mes soins.</p>
+
+<img class="lpf" src="images/lpf.gif">
+
+<p data-en="<strong>Rêve party</strong>: an animated kaleidoscope made in After Effects and screen printed on physical support as part of my studies."><strong>Rêve party</strong> : kaléidoscope animé sur After Effects et décliné sur support imprimé en sériegraphie, réalisé dans le cadre de mes études.</p>
+
+<img class="rave" src="images/rave.gif">
+<img class="rave2" src="images/rave2.gif">
+
+<p data-en="<strong>Maitrank 2024</strong>: communication campaign created for the Maitrank festival in Arlon as part of my studies."><strong>Maitrank 2024</strong> : campagne de communication réalisée pour la fête du Maitrank d'Arlon dans le cadre de mes études.</p>
+
+<img class="affichesmaitrank1" src="images/maitrank1.gif">
+<img class="affichesmaitrank2" src="images/maitrank2.gif">
+
+<p data-en="<br><strong>CAP flyer</strong>: flyer created for Les Chiroux as part of my studies.<br>"><br><strong>Brochure CAP</strong> : brochure crée pour les Chiroux dans le cadre de mes études.<br></p>
+
+<img class="lpf" src="images/chiroux.gif">
+
+<p data-en="<strong>Atlas sensible</strong>: a self-published urban sketching fanzine."><strong>Atlas sensible</strong> : fanzine d'urban sketching auto-édité.</p>
+
+<img class="atlas" src="images/atlas.gif">
+      <script>
+
+        $(document).ready(function() {
+        window.sr = new ScrollReveal();
+
+        sr.reveal('p');
+        sr.reveal('img', { delay: 200 });
+        });
+
+
+      </script>
+<a class="retour" href="#top" data-en="back">Retour</a> 
+    </div>
+  <footer>© PERROT ETIENNE - Tous droits réservés -
+    </footer>
+  </main>
+</body>
+</html>

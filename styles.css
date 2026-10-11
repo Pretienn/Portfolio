@@ -1,0 +1,450 @@
+@font-face  {
+  font-family: 'Work-medium';
+  src: url(typo/WorkSans-Medium.ttf);}
+
+@font-face  {
+  font-family: 'Work-bold';
+  src: url(typo/WorkSans-SemiBold.ttf);}
+
+@font-face {
+  font-family: 'Velvelyne';
+  src: url(typo/Velvelyne-Regular.otf);}
+
+
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{
+  margin:0;
+  padding:0;
+}
+
+
+h1{
+	font-family: 'Velvelyne';
+	font-size: 75px;
+}
+
+h2{
+	font-family: 'Work-bold';
+}
+
+p{
+	font-family: 'Work-medium';
+}
+
+header{
+  margin: 0px;
+  padding: 10px;
+   background-image: url(images/bg2.png);
+  margin-bottom: 40px;
+}
+
+body{
+   background-image: url(images/bg.png);
+}
+
+main{
+	background-color: white;
+	    width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+ justify-content:center;
+      align-items:center;
+}
+
+.titre{
+ width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+}
+
+.profil{
+	width: 150px;
+  flex-shrink: 0;          
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.nom{
+	color: white;
+}
+.bouton {
+  display: inline-block;  
+  display: table;
+  margin: 40px auto;       
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+   border: solid black 2px;
+  border-radius: 10px;
+  font-family: 'Work-medium';
+  text-decoration: none;
+
+}
+
+.bouton:hover {
+  background-color: #6496C9;
+  color: white;
+}
+
+.lang-switch button {
+  font-family:'Work-medium';
+display: inline-block; 
+ background-color: white;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.lang-switch button:hover {
+  background-color:#6496C9;
+  color: white;
+}
+
+nav{
+
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+nav li{
+ display:inline-block ;
+}
+
+nav a {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+}
+
+a{
+  font-family: 'Work-medium';	
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+li{
+  list-style-type: none;
+} 
+
+.CV,
+.Contact {
+  display: none;
+}
+
+.loup1{
+  width: 49%;
+  height: auto;
+  border: solid black 2px;
+  border-radius: 10px;
+  float: right;
+    margin-top: 15px;
+}
+
+.loup2{
+  width: 49%;
+  height: auto;
+  border: solid black 2px;
+  border-radius: 10px;
+  margin-bottom: 80px;
+    margin-top: 15px;
+}
+
+.dette1{
+  width: 49%;
+  height: auto;
+  border: solid orange 2px;
+  border-radius: 10px;
+  float: right;
+    margin-top: 15px;
+}
+
+.dette2{
+  width: 49%;
+  height: auto;
+  border: solid orange 2px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.affichesmaitrank1{
+  width: 80%;
+  height: auto;
+  padding-top: 40px; 
+
+}
+
+.affichesmaitrank2{
+  width: 80%;
+  height: auto;
+  margin-bottom: 80px; 
+
+}
+
+.rave{
+  width: 35%;
+  height: auto;
+  margin-bottom: 80px;
+  margin-left: 15px;
+  margin-top: 20px;
+    border:solid black 2px;
+  border-radius: 10px;
+}
+
+.rave2{
+  float: left;
+  width: 35.5%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 45px;
+  border:solid black 2px;
+  border-radius: 10px;
+}
+
+.edc1{
+  float: left;
+  width: 46%;
+  display: block;         
+  margin-top: 20px;
+  margin-bottom: 40px;    
+  border: solid black 2px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.edc2{
+  width: 46%;
+  display: block;         
+  margin-top: 20px;
+  margin-bottom: 40px;    
+  border: solid black 2px;
+  border-radius: 10px;
+   margin-left: 45px;
+}
+.edc3{
+  float: left;
+  width: 46%;
+  display: block;         
+  margin-bottom: 40px;    
+  border: solid black 2px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.edc_titre{
+  margin-top: 40px;
+}
+
+.edc_titre2{
+  display: table;
+  margin: 40px auto;
+}
+
+.edc4{
+    width: 60%;         
+  margin-top: 20px;    
+  border: solid black 2px;
+  border-radius: 10px;
+    display: table;
+  margin: 40px auto;
+}
+
+.transat_titre{
+  display: table;
+  margin: 40px auto;
+}
+
+.prompto{
+   display: table;
+  margin: 40px auto;
+}
+
+.sceno{
+  width: 90%;
+  height: auto;
+     display: table;
+  margin: 40px auto;
+}
+
+.manuf{
+  width: 80%;
+  margin-top: 40px;
+   display: table;
+     margin: 40px auto;
+}
+
+.lpf{
+  width: 60%;
+  height: auto;
+    border: solid white 2px;
+  border-radius: 10px;
+  margin-top: 20px;
+    display: table;
+     margin: 40px auto;
+     margin-bottom: 40px;
+}
+
+.atlas{
+  width: 80%;
+   margin-top: 20px;
+    display: table;
+     margin: 40px auto;
+}
+
+footer{
+  font-family: 'Work-medium';
+  font-size: 11px;
+  color: black;
+  border-bottom: solid black 2px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 100px;
+
+}
+
+.retour{
+  display: table;
+  margin: 40px auto 0;
+  color: black;
+   padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: solid black 2px;
+  border-radius: 10px;
+  font-family: 'Work-medium';
+  text-decoration: none;
+
+}
+
+.retour:hover {
+  background-color: #6496C9;
+  color: white;
+}
+
+
+ /* version mobile */
+
+
+@media screen and (max-width: 768px) {
+
+
+  body {
+    background-image: none;
+    background-color: white;
+  }
+
+  header {
+    background-image: none;
+    background-color: #6496C9;
+    margin-bottom: 20px;
+  }
+
+
+  main {
+    width: auto;
+    padding: 15px;
+  }
+
+  main p br {
+    display: none;
+  }
+
+  main p {
+    margin: 15px 0;  
+  }
+
+  .titre {
+    width: auto;
+    padding: 10px;
+    flex-direction: column;   
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .profil {
+    width: 110px;
+  }
+
+
+  h1 {
+    font-size: 40px;
+  }
+
+
+  .lang-switch button {
+    padding: 6px 14px;
+  }
+
+
+  nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+
+  main img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .edc1,
+  .edc2,
+  .edc3,
+  .dette1,
+  .dette2,
+  .loup1,
+  .loup2,
+  .rave,
+  .rave2,
+  .affichesmaitrank1,
+  .affichesmaitrank2,
+  .edc4,
+  .lpf,
+  .sceno,
+  .manuf,
+  .atlas {
+    float: none;              
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding-top: 0;
+  }
+
+ .rave,
+  .rave2 {
+    display: inline-block;   
+    width: 48%;              
+    box-sizing: border-box; 
+    vertical-align: top;
+    margin: 20px 0;
+  }
+
+  .prompto {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .bouton,
+  .retour {
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+}
+
+
